@@ -1,0 +1,643 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3216 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 293.723 ; gain = 83.746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [Z:/Game/Game/Game.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-638] synthesizing module 'pow' [Z:/Game/Game/Game.srcs/sources_1/new/top.v:153]
+INFO: [Synth 8-256] done synthesizing module 'pow' (1#1) [Z:/Game/Game/Game.srcs/sources_1/new/top.v:153]
+INFO: [Synth 8-638] synthesizing module 'block' [Z:/Game/Game/Game.srcs/sources_1/new/top.v:168]
+INFO: [Synth 8-256] done synthesizing module 'block' (2#1) [Z:/Game/Game/Game.srcs/sources_1/new/top.v:168]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [Z:/Game/Game/Game.runs/synth_1/.Xil/Vivado-5812-DESKTOP-5KRUO71/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (3#1) [Z:/Game/Game/Game.runs/synth_1/.Xil/Vivado-5812-DESKTOP-5KRUO71/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'm_score' [Z:/Game/Game/Game.srcs/sources_1/new/m_score.v:23]
+INFO: [Synth 8-638] synthesizing module 'm_7segled' [Z:/Game/Game/Game.srcs/sources_1/new/m_score.v:91]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/Game/Game/Game.srcs/sources_1/new/m_score.v:95]
+INFO: [Synth 8-256] done synthesizing module 'm_7segled' (4#1) [Z:/Game/Game/Game.srcs/sources_1/new/m_score.v:91]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/Game/Game/Game.srcs/sources_1/new/m_score.v:54]
+INFO: [Synth 8-256] done synthesizing module 'm_score' (5#1) [Z:/Game/Game/Game.srcs/sources_1/new/m_score.v:23]
+INFO: [Synth 8-256] done synthesizing module 'top' (6#1) [Z:/Game/Game/Game.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3331] design top has unconnected port w_btnc
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 331.148 ; gain = 121.172
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 331.148 ; gain = 121.172
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'clk_wiz' [Z:/Game/Game/Game.srcs/sources_1/new/top.v:100]
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [Z:/Game/Game/Game.runs/synth_1/.Xil/Vivado-5812-DESKTOP-5KRUO71/dcp/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
+Finished Parsing XDC File [Z:/Game/Game/Game.runs/synth_1/.Xil/Vivado-5812-DESKTOP-5KRUO71/dcp/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
+Parsing XDC File [Z:/Game/Game/Game.srcs/constrs_1/new/main.xdc]
+Finished Parsing XDC File [Z:/Game/Game/Game.srcs/constrs_1/new/main.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Z:/Game/Game/Game.srcs/constrs_1/new/main.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 647.230 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 647.230 ; gain = 437.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 647.230 ; gain = 437.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for w_clk. (constraint file  Z:/Game/Game/Game.runs/synth_1/.Xil/Vivado-5812-DESKTOP-5KRUO71/dcp/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for w_clk. (constraint file  Z:/Game/Game/Game.runs/synth_1/.Xil/Vivado-5812-DESKTOP-5KRUO71/dcp/clk_wiz_0_in_context.xdc, line 4).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 647.230 ; gain = 437.254
+---------------------------------------------------------------------------------
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+INFO: [Synth 8-5545] ROM "r_digit" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [Z:/Game/Game/Game.srcs/sources_1/new/top.v:72]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [Z:/Game/Game/Game.srcs/sources_1/new/top.v:73]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [Z:/Game/Game/Game.srcs/sources_1/new/top.v:70]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [Z:/Game/Game/Game.srcs/sources_1/new/top.v:71]
+WARNING: [Synth 8-327] inferring latch for variable 'r_sg_reg' [Z:/Game/Game/Game.srcs/sources_1/new/m_score.v:96]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:29 . Memory (MB): peak = 647.230 ; gain = 437.254
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 15    
+	   2 Input     32 Bit       Adders := 7     
+	   3 Input     11 Bit       Adders := 6     
+	   2 Input     11 Bit       Adders := 6     
+	   2 Input      8 Bit       Adders := 7     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               11 Bit    Registers := 8     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
++---Multipliers : 
+	                32x32  Multipliers := 14    
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 8     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 4     
+	  11 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 6     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 6     
+	   3 Input     11 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               11 Bit    Registers := 8     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 8     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 4     
+Module pow 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                32x32  Multipliers := 2     
+Module block 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     11 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
+Module m_7segled 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input      1 Bit        Muxes := 1     
+Module m_score 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 9     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+INFO: [Synth 8-5545] ROM "r_digit" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [Z:/Game/Game/Game.srcs/sources_1/new/top.v:161]
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: Generating DSP hit2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+DSP Report: operator hit2 is absorbed into DSP hit2.
+WARNING: [Synth 8-3331] design top has unconnected port w_btnc
+WARNING: [Synth 8-3332] Sequential element (speed_x_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[6]) is unused and will be removed from module m_7segled__1.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[5]) is unused and will be removed from module m_7segled__1.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[4]) is unused and will be removed from module m_7segled__1.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[3]) is unused and will be removed from module m_7segled__1.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[2]) is unused and will be removed from module m_7segled__1.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[1]) is unused and will be removed from module m_7segled__1.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[0]) is unused and will be removed from module m_7segled__1.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[6]) is unused and will be removed from module m_7segled__2.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[5]) is unused and will be removed from module m_7segled__2.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[4]) is unused and will be removed from module m_7segled__2.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[3]) is unused and will be removed from module m_7segled__2.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[2]) is unused and will be removed from module m_7segled__2.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[1]) is unused and will be removed from module m_7segled__2.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[0]) is unused and will be removed from module m_7segled__2.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[6]) is unused and will be removed from module m_7segled__3.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[5]) is unused and will be removed from module m_7segled__3.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[4]) is unused and will be removed from module m_7segled__3.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[3]) is unused and will be removed from module m_7segled__3.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[2]) is unused and will be removed from module m_7segled__3.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[1]) is unused and will be removed from module m_7segled__3.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[0]) is unused and will be removed from module m_7segled__3.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[6]) is unused and will be removed from module m_7segled__4.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[5]) is unused and will be removed from module m_7segled__4.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[4]) is unused and will be removed from module m_7segled__4.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[3]) is unused and will be removed from module m_7segled__4.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[2]) is unused and will be removed from module m_7segled__4.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[1]) is unused and will be removed from module m_7segled__4.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[0]) is unused and will be removed from module m_7segled__4.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[6]) is unused and will be removed from module m_7segled__5.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[5]) is unused and will be removed from module m_7segled__5.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[4]) is unused and will be removed from module m_7segled__5.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[3]) is unused and will be removed from module m_7segled__5.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[2]) is unused and will be removed from module m_7segled__5.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[1]) is unused and will be removed from module m_7segled__5.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[0]) is unused and will be removed from module m_7segled__5.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[6]) is unused and will be removed from module m_7segled__6.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[5]) is unused and will be removed from module m_7segled__6.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[4]) is unused and will be removed from module m_7segled__6.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[3]) is unused and will be removed from module m_7segled__6.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[2]) is unused and will be removed from module m_7segled__6.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[1]) is unused and will be removed from module m_7segled__6.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[0]) is unused and will be removed from module m_7segled__6.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[6]) is unused and will be removed from module m_7segled__7.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[5]) is unused and will be removed from module m_7segled__7.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[4]) is unused and will be removed from module m_7segled__7.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[3]) is unused and will be removed from module m_7segled__7.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[2]) is unused and will be removed from module m_7segled__7.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[1]) is unused and will be removed from module m_7segled__7.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[0]) is unused and will be removed from module m_7segled__7.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[6]) is unused and will be removed from module m_7segled.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[5]) is unused and will be removed from module m_7segled.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[4]) is unused and will be removed from module m_7segled.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[3]) is unused and will be removed from module m_7segled.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[2]) is unused and will be removed from module m_7segled.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[1]) is unused and will be removed from module m_7segled.
+WARNING: [Synth 8-3332] Sequential element (r_sg_reg[0]) is unused and will be removed from module m_7segled.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:56 . Memory (MB): peak = 647.230 ; gain = 437.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|pow         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pow         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz/clk_out1' to pin 'clk_wiz/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:11 . Memory (MB): peak = 731.680 ; gain = 521.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:16 . Memory (MB): peak = 745.543 ; gain = 535.566
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (speed_y_reg[2]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:01:26 . Memory (MB): peak = 841.301 ; gain = 631.324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:27 . Memory (MB): peak = 841.301 ; gain = 631.324
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:27 . Memory (MB): peak = 841.301 ; gain = 631.324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:10 ; elapsed = 00:01:28 . Memory (MB): peak = 841.301 ; gain = 631.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:10 ; elapsed = 00:01:28 . Memory (MB): peak = 841.301 ; gain = 631.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:11 ; elapsed = 00:01:28 . Memory (MB): peak = 841.301 ; gain = 631.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:11 ; elapsed = 00:01:29 . Memory (MB): peak = 841.301 ; gain = 631.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_0 |     1|
+|2     |CARRY4    |   876|
+|3     |DSP48E1   |    42|
+|4     |LUT1      |   705|
+|5     |LUT2      |  1333|
+|6     |LUT3      |   871|
+|7     |LUT4      |   900|
+|8     |LUT5      |   473|
+|9     |LUT6      |   984|
+|10    |FDRE      |   308|
+|11    |FDSE      |    26|
+|12    |IBUF      |     6|
+|13    |OBUF      |    45|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------+--------+------+
+|      |Instance |Module  |Cells |
++------+---------+--------+------+
+|1     |top      |        |  6571|
+|2     |  d1     |block   |    15|
+|3     |  d2     |block_0 |    35|
+|4     |  g1     |block_1 |    40|
+|5     |  g2     |block_2 |    49|
+|6     |  pow0   |pow     |   166|
+|7     |  pow1   |pow_3   |   154|
+|8     |  pow2   |pow_4   |   154|
+|9     |  pow3   |pow_5   |   154|
+|10    |  pow4   |pow_6   |   155|
+|11    |  pow6   |pow_7   |   149|
+|12    |  pow7   |pow_8   |   154|
+|13    |  s      |m_score |  3423|
++------+---------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:11 ; elapsed = 00:01:29 . Memory (MB): peak = 841.301 ; gain = 631.324
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 60 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 841.301 ; gain = 304.754
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:01:29 . Memory (MB): peak = 841.301 ; gain = 631.324
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 924 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 62 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:12 ; elapsed = 00:01:24 . Memory (MB): peak = 841.301 ; gain = 623.340
+INFO: [Common 17-1381] The checkpoint 'Z:/Game/Game/Game.runs/synth_1/top.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 841.301 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 15 16:14:44 2018...
